@@ -1,0 +1,24 @@
+<?php 
+include('config.php'); 
+if (isset($_POST['submitted'])) { 
+foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
+$sql = "INSERT INTO `studentinfo` ( `fristname` ,  `lastname`  ) VALUES(  '{$_POST['fristname']}' ,  '{$_POST['lastname']}'  ) "; 
+mysql_query($sql) or die(mysql_error()); 
+echo "Added row.<br />"; 
+echo "<a href='list.php'>Back To Listing</a>"; 
+} 
+?>
+
+
+<html>
+<title>LivePayRoll : Company Registration
+</title>
+<header></header>
+<body>
+<form action=''  method='POST'>
+Company Name: <input type="text" name="company_name" /><br/>
+Username: <input type="text" name="username" /><br/>
+Password: <input type="password" name="pwd" /><br/>
+</form> 
+</body>
+</html>

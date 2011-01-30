@@ -1,0 +1,10 @@
+--Company Table--
+
+REQUIRED FIELDS ON REGISTRATION:
+1. CompanyKey
+2. Username
+3. Password
+4. CompanyName
+5. SECURITY CODE
+
+
